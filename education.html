@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Popup container - can be anything you want */
+    .popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* The actual popup */
+    .popup .popuptext {
+      visibility: hidden;
+      width: 500px;
+      height: auto;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -80px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .education {
+      background: pink;
+      border: 4px solid black;
+      padding: 2px;
+      color: black;
+      box-shadow: 0.5em 0.5em 0.1em #555;
+    }
+
+    .popup:hover {
+      color: red;
+    }
+  </style>
+</head>
+
+<body style="text-align:center">
+  <div class="education">
+    <h2>EDUCATIONAL BOOKS</h2>
+    <br>
+  </div>
+  <br><br>
+  <div class="popup" onclick='myFunction("myPopup1")'> Is Math Real?
+    <span class="popuptext" id="myPopup1">Where do we learn math: From rules in a textbook? From logic and deduction?
+      Not really, according to mathematician Eugenia Cheng: we learn it from human curiosity—most importantly, from
+      asking questions. This may come as a surprise to those who think that math is about finding the one right answer,
+      or those who were told that the “dumb” question they asked just proved they were bad at math. But Cheng shows why
+      people who ask questions like “Why does 1 + 1 = 2?” are at the very heart of the search for mathematical truth.
+
+    </span>
+    <br><br>
+  </div>
+  <div class="popup" onclick="myFunction('myPopup2')">Python Crash Course, 3rd Edition: A Hands-On
+    <span class="popuptext" id="myPopup2">Python Crash Course is the world’s best-selling guide to the Python
+      programming language. This fast-paced, thorough introduction will have you writing programs, solving problems, and
+      developing functioning applications in no time.
+
+      You’ll start by learning basic programming concepts, such as variables, lists, classes, and loops, and practice
+      writing clean code with exercises for each topic. You’ll also learn how to make your programs interactive and test
+      your code safely before adding it to a project. You’ll put your new knowledge into practice by creating a Space
+      Invaders–inspired arcade game, building a set of data visualizations with Python’s handy libraries, and deploying
+      a simple application online.</span>
+  </div>
+  <br><br>
+  <div class="popup" onclick="myFunction('myPopup3')">An Anthology of Intriguing Animals
+    <span class="popuptext" id="myPopup3">The animal kingdom is so much bigger than young minds can fathom and there is
+      always more to learn. An Anthology of Intriguing Animals is a stunning animal encyclopedia for young readers to
+      explore, with reference pages packed with fascinating information, little learners will be captivated as they
+      discover the facts, stories and myths behind their favourite animals. Whether it’s where the slow-motion sloth
+      lives, how the plodding pangolin protects itself from predators, or which animal the Ancient Egyptians thought
+      rolled the Sun across the sky, children can learn all sorts of fun animal facts from the storybook descriptions.
+
+      This beautiful modern bestiary lets you find the animals that interest you and uncover new favourites along the
+      way. From tigers and chameleons to wolves and owls there’s an animal for everyone in this compendium of
+      creatures.</span>
+  </div>
+  <br><br>
+  <div class="popup" onclick="myFunction('myPopup4')">Paperback Oxford English Dictionary
+    <span class="popuptext" id="myPopup4">This fully updated edition offers over 120,000 words, phrases, and
+      definitions. It covers all the words you need for everyday use, carefully selected from the evidence of the Oxford
+      English Corpus, a databank of 21st century English, containing over 2 billion words.The Factfinder centre section
+      gives quick-reference entries on topics including famous people, countries, and science.
+
+      Discover more on oxforddictionaries.com, Oxford's hub for dictionaries and language reference.</span>
+  </div>
+  <br><br>
+  <div class="popup" onclick="myFunction('myPopup5')">Trace Numbers Practice Workbook
+    <span class="popuptext" id="myPopup5">This book is perfect for kids of all ages who want to learn numbers and
+      improve their writing skills. These essential number drills will help with number recognition and learning basic
+      math concepts.
+    </span>
+  </div>
+  <script>
+    var myPopup;
+    // When the user clicks on div, open the popup
+    function myFunction(myPopup) {
+      var popup = document.getElementById(myPopup);
+      popup.classList.toggle("show");
+    }
+  </script>
+
+</body>
+<footer>
+  <i class="fa-brands fa-instagram"></i>
+  <i class="fa-brands fa-facebook"></i>
+  <i class="fa-brands fa-twitter"></i>
+</footer>
+
+</html>
